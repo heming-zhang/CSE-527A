@@ -8,7 +8,7 @@ Include SRM Gradient Decendent, Naive Bayes, Kernel SVM, Neural Network
 * **[Project3 Kernel SVM](https://classes.cec.wustl.edu/~SEAS-SVC-CSE517A/sp20/projects/03kernelsvms.html)**: Implement Algorithm L2 Distance Algorithm, Compute Kernel and Turns it into Quadratic Program;
 * **[Project4 Neural Networks](https://classes.cec.wustl.edu/~SEAS-SVC-CSE517A/sp20/projects/04Neuralnetworks.html)**: Implement Forward Pass, Compute Loss, Back Propagation and Gradient Decendent.
 
-## Run
+## Run Project
 ```
 cd project1
 unzip data.zip
@@ -28,4 +28,24 @@ python3 main.py sigmoid 50 10 0.08 20 10 20
 python3 bostontest.py
 OR RUN
 sh ./run.sh
+```
+
+## Run Application
+```
+cd milestone1
+python3 readfile.py
+python3 linear_regression.py
+```
+```
+cd milestone2
+cd keras
+python3 read_file.py
+python3 main_nn.py
+cd pytorch
+python3 read_file.py
+python3 main_nn.py
+```
+```
+cd milestone3
+python3 corel.py
 ```
