@@ -1,0 +1,67 @@
+This is your grade report from the Autograder ran on 2020-02-12 20:48:52. 
+For this project we ran 1 evaluation(s) on your committed code. On the nb_eval evaluation you scored 0 points with our tests. Unfortunately, you failed 7 test(s) on this evaluation: 
+
+Failed Test 1 naivebayesPY: Probabilities of P(Y) do not sum to 1.
+Traceback (most recent call last):
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project2/hemingzhang/nb_tests.py", line 40, in nb_tests
+    pos,neg = naivebayesPY(xTr,yTr)
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project2/hemingzhang/naivebayesPY.py", line 43, in naivebayesPY
+    return pos,neg
+NameError: name 'pos' is not defined
+
+Failed Test 2 naivebayesPXY: The calculation of P(Y) seems incorrect.
+Traceback (most recent call last):
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project2/hemingzhang/nb_tests.py", line 62, in nb_tests
+    pos,neg = naivebayesPY(x,y)
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project2/hemingzhang/naivebayesPY.py", line 43, in naivebayesPY
+    return pos,neg
+NameError: name 'pos' is not defined
+
+Failed Test 3: The calculation of P(X|Y) seems incorrect.
+Traceback (most recent call last):
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project2/hemingzhang/nb_tests.py", line 86, in nb_tests
+    pospossi,negpossi = naivebayesPXY(x,y)
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project2/hemingzhang/naivebayesPXY.py", line 48, in naivebayesPXY
+    return posprob,negprob
+NameError: name 'posprob' is not defined
+
+Failed Test 4~8: naivebayesPXY failed
+Traceback (most recent call last):
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project2/hemingzhang/nb_tests.py", line 107, in nb_tests
+    pospossi,negpossi = naivebayesPXY(xTr,yTr)
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project2/hemingzhang/naivebayesPXY.py", line 48, in naivebayesPXY
+    return posprob,negprob
+NameError: name 'posprob' is not defined
+
+Failed Test 9:  The calculation of log P(Y=1|X)/P(Y=-1|X) seems incorrect.
+Traceback (most recent call last):
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project2/hemingzhang/nb_tests.py", line 154, in nb_tests
+    logratio = naivebayes(x,y,np.array([[1],[1]]))
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project2/hemingzhang/naivebayes.py", line 38, in naivebayes
+    return logratio
+NameError: name 'logratio' is not defined
+
+Failed Test 10: pos prob or neg prob from naivebayesCL seems incorrect.
+Traceback (most recent call last):
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project2/hemingzhang/nb_tests.py", line 173, in nb_tests
+    w,b = naivebayesCL(x,y)
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project2/hemingzhang/naivebayesCL.py", line 37, in naivebayesCL
+    return w,b
+NameError: name 'w' is not defined
+
+Failed Test 11:  Naive Bayes Training accuracy <= 0.6 -- this seems like a bad classifier.
+Traceback (most recent call last):
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project2/hemingzhang/nb_tests.py", line 194, in nb_tests
+    w,b = naivebayesCL(xTr,yTr)
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project2/hemingzhang/naivebayesCL.py", line 37, in naivebayesCL
+    return w,b
+NameError: name 'w' is not defined
+
+You scored 0 points in the competition because of an error:
+Traceback (most recent call last):
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project2/hemingzhang/nb_eval.py", line 92, in nb_eval
+    w,b = naivebayesCL(xTr,yTr)
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project2/hemingzhang/naivebayesCL.py", line 37, in naivebayesCL
+    return w,b
+NameError: name 'w' is not defined
+For this project, you scored a total of 0 points.

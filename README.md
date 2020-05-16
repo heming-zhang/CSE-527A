@@ -11,6 +11,7 @@ Include SRM Gradient Decendent, Naive Bayes, Kernel SVM, Neural Network
 ## Run
 ```
 cd project1
+unzip data.zip
 python3 project1Main.py
 ```
 ```
