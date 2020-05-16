@@ -1,0 +1,24 @@
+The autograder ran into an exception when running your code.Traceback (most recent call last):
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project1/hemingzhang/grade.py", line 41, in grade
+    testScore,msgs,extraScore = evalHand();
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project1/hemingzhang/srm_eval.py", line 16, in srm_eval
+    incorrect, ok, msgs=srm_tests()
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project1/hemingzhang/srm_tests.py", line 48, in srm_tests
+    d=checkgradLogistic(logistic,np.random.rand(D,1),1e-05,x,y)
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project1/hemingzhang/checkgradLogistic.py", line 21, in checkgradLogistic
+    y0,dy = f(X,x,y)   # get the partial derivatives dy
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project1/hemingzhang/logistic.py", line 22, in logistic
+    return loss,gradient
+NameError: name 'loss' is not defined
+The autograder ran into an exception when running your code.Traceback (most recent call last):
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project1/hemingzhang/grade.py", line 41, in grade
+    testScore,msgs,extraScore = evalHand();
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project1/hemingzhang/srm_eval.py", line 16, in srm_eval
+    incorrect, ok, msgs=srm_tests()
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project1/hemingzhang/srm_tests.py", line 48, in srm_tests
+    d=checkgradLogistic(logistic,np.random.rand(D,1),1e-05,x,y)
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project1/hemingzhang/checkgradLogistic.py", line 21, in checkgradLogistic
+    y0,dy = f(X,x,y)   # get the partial derivatives dy
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project1/hemingzhang/logistic.py", line 22, in logistic
+    return loss,gradient
+NameError: name 'loss' is not defined

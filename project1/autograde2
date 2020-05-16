@@ -1,0 +1,39 @@
+This is your grade report from the Autograder ran on 2020-02-01 12:28:52. 
+For this project we ran 1 evaluation(s) on your committed code. On the srm_eval evaluation you scored 52 points with our tests. Unfortunately, you failed 3 test(s) on this evaluation: 
+
+Test 5: Hinge function does not pass checkgrad.Test 7: Hinge gradient does not match solution.Test 8: Hinge function does not match solution.You scored 0 points in the competition because of an error:
+Traceback (most recent call last):
+  File "/project/linuxlab/anaconda3/lib/python3.7/site-packages/scipy/io/matlab/mio.py", line 39, in _open_file
+    return open(file_like, mode), True
+FileNotFoundError: [Errno 2] No such file or directory: 'w_trained.mat'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project1/hemingzhang/srm_eval.py", line 37, in srm_eval
+    data = io.loadmat('w_trained.mat')
+  File "/project/linuxlab/anaconda3/lib/python3.7/site-packages/scipy/io/matlab/mio.py", line 216, in loadmat
+    with _open_file_context(file_name, appendmat) as f:
+  File "/project/linuxlab/anaconda3/lib/python3.7/contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "/project/linuxlab/anaconda3/lib/python3.7/site-packages/scipy/io/matlab/mio.py", line 19, in _open_file_context
+    f, opened = _open_file(file_like, appendmat, mode)
+  File "/project/linuxlab/anaconda3/lib/python3.7/site-packages/scipy/io/matlab/mio.py", line 45, in _open_file
+    return open(file_like, mode), True
+FileNotFoundError: [Errno 2] No such file or directory: 'w_trained.mat'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project1/hemingzhang/srm_eval.py", line 42, in srm_eval
+    w=trainspamfilter(X_train, Y_train)
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project1/hemingzhang/trainspamfilter.py", line 18, in trainspamfilter
+    w_trained = grdescent(f, np.zeros((xTr.shape[0], 1)), 1e-09, 1000)
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project1/hemingzhang/grdscent.py", line 24, in grdescent
+    new_loss, gradient = func(w)
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project1/hemingzhang/trainspamfilter.py", line 17, in <lambda>
+    f = lambda w : hinge(w, xTr, yTr, 1)
+  File "/home/warehouse/SEAS-SVC-CSE517A/cse517a/server/autograder/grading_temp/project1/hemingzhang/hinge.py", line 29, in hinge
+    if 1 - yXw[i] >= 0:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+For this project, you scored a total of 52 points.
