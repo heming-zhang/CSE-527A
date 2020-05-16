@@ -16,5 +16,16 @@ python3 project1Main.py
 ```
 ```
 cd project2
-
+python3 whoareyou.py
+```
+```
+cd project3
+python3 main.py
+```
+```
+cd project4
+python3 main.py sigmoid 50 10 0.08 20 10 20
+python3 bostontest.py
+OR RUN
+./run.sh
 ```

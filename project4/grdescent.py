@@ -20,15 +20,18 @@ def grdescent(func, w0, stepsize, maxiter, tolerance = 1e-2):
 #%
     w = w0
     ## << Insert your solution here
-    for i in range(1, maxiter):
-        tmp = stepsize*func(w)[1]
-        if tolerance > np.linalg.norm(w - tmp):
-            break
-        while func(w)[0] < func(w-tmp)[0]:
+    loss = float("inf")
+    for t in range(maxiter):
+
+        # make sure gradient descent is non-increasing
+        while func(w)[0] < func(w - stepsize * func(w)[1])[0]:
             stepsize = stepsize * 0.5
-            tmp = stepsize*func(w)[1]
+
         w = w - stepsize * func(w)[1]
         stepsize = stepsize * 1.01
-    
 
+        if np.linalg.norm(stepsize * func(w)[1]) < tolerance:
+            break
+
+    ## >>    
     return w

@@ -27,19 +27,16 @@ def forward_pass(W, xTr, trans_func):
     aas = [None]*(len(W)+1);   aas[-1] = xTr
     
     # Do the forward process here
-    for i in range(len(W)-1, -1, -1):
+    for i in range(len(W)-1, 0, -1):
         # INSERT CODE
         #<<kqw
         aas[i] = W[i] @ zzs[i+1]
-        if i != 0:
-            zzs[i] = np.vstack((trans_func(aas[i]), np.ones([1,n])))
-        else:
-            zzs[i] = aas[i]
+        zzs[i] = np.vstack((trans_func(aas[i]), np.ones([1,n])))
         
     # INSERT CODE: (last one is special, no transition function)
     ##<<kqw
-    # zzs[0]=W[0]@zzs[1]
-    # aas[0]=zzs[0]
+    zzs[0]=W[0]@zzs[1]
+    aas[0]=zzs[0]
     ##>>kqwend
     
     return aas, zzs

@@ -15,9 +15,9 @@ def bostondemo(wst = None):
         
     bostonData = sio.loadmat('./boston.mat')
     TRANSNAME='sigmoid'
-    ROUNDS=200 #default 200
-    ITER=50;
-    STEPSIZE=0.01; #default 0.01
+    ROUNDS=200  #default 200
+    ITER=50  #default 50
+    STEPSIZE=0.01  #default 0.01
     
     xTr = bostonData['xTr']
     xTe = bostonData['xTe']

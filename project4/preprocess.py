@@ -20,15 +20,16 @@ def preprocess(xTr,xTe):
 #
 # u,m - any other data should be pre-processed by x-> u*(x-m)
 #       where u is d by d ndnumpy array and m is d by 1 numpy ndarray
-    
-    d, _ = np.shape(xTr)
-    # m = np.zeros((d,1))
-    # u = np.zeros((d,d))
-    ## << Remove 2 lines above and insert your solution here
-    mean = np.mean(xTr, axis=1)
-    std = np.std(xTr, axis=1)
-    u = np.diag(1/std)
-    m = mean.reshape([d, 1])
-    xTr = u @ (xTr - m)
-    xTe = u @ (xTe - m)
+
+
+    d,nTr=np.shape(xTr)  # (13,305)
+    d,nTe=np.shape(xTe)  # (13,101)
+    m = np.mean(xTr,1).reshape(d,1)  # (13,1)
+    std = np.std(xTr,1)  # (13,)
+    u = np.diag(1./std)  # (13,13)
+    # xTr = u @ (xTr-np.tile(m,(1,nTr)))  # tile:(13,305)
+    # xTe = u @ (xTe-np.tile(m,(1,nTe)))
+    xTr = u @ (xTr-m)  # tile:(13,305)
+    xTe = u @ (xTe-m)
+    ## >>
     return xTr, xTe, u, m

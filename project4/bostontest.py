@@ -16,8 +16,7 @@ from deepnet import deepnet
 
 def bostontest():
     bostonData = sio.loadmat('./boston.mat')
-    # boston_secretData = sio.loadmat('./boston_secret.mat')
-    boston_secretData = sio.loadmat('./boston.mat')
+    #boston_secretData = sio.loadmat('./boston_secret.mat')
     
     with open('best_parameters.pickle', 'rb') as f:
         best_parameters = pickle.load(f)
@@ -26,8 +25,8 @@ def bostontest():
     yTr = bostonData['yTr']
     # xTe_secret = boston_secretData['xTe_secret']
     # yTe_secret = boston_secretData['yTe_secret']
-    xTe_secret = bostonData['xTr']
-    yTe_secret = bostonData['yTr']
+    xTe_secret = bostonData['xTe']
+    yTe_secret = bostonData['yTe']
         
     TRANSNAME = best_parameters['TRANSNAME']
     ROUNDS = best_parameters['ROUNDS']
@@ -106,8 +105,10 @@ def bostontest():
       	error_score = 9
     else:
       	error_score = 10
-    
     return time_score, error_score
-time, err = bostontest()
-print(time)
-print(err)
+
+
+if __name__=="__main__":
+    time_score, error_score = bostontest()
+    print("time",time_score)
+    print("error",error_score)
